@@ -1,5 +1,6 @@
 # coding: utf-8
 import sys, os
+
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
 import pickle
@@ -32,12 +33,17 @@ def predict(network, x):
     return y
 
 
+"""
+这里我觉得。只是怎么用神经网络。参数调整好了。然后用现在的数据去尝试。
+y：一个10位的数组。分别代表是哪一个数字的可能性。哪个最大，就是哪个。
+然后和真实的数据做比对。
+"""
 x, t = get_data()
 network = init_network()
 accuracy_cnt = 0
 for i in range(len(x)):
     y = predict(network, x[i])
-    p= np.argmax(y) # 最も確率の高い要素のインデックスを取得
+    p = np.argmax(y)  # 获得概率最高的那一个。默认就是产出。
     if p == t[i]:
         accuracy_cnt += 1
 
