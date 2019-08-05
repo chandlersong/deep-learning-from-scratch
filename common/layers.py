@@ -9,6 +9,18 @@ class Relu:
         self.mask = None
 
     def forward(self, x):
+        """
+        这里是numpy的一个用法
+        比如x = 【0.1,-1
+                 1，3】
+
+        self.mask = [true,false
+                     true,true]
+        out = [【0.1,0
+                1,3]
+        :param x:
+        :return:
+        """
         self.mask = (x <= 0)
         out = x.copy()
         out[self.mask] = 0
