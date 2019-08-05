@@ -61,6 +61,11 @@ class Affine:
         self.db = None
 
     def forward(self, x):
+        """
+         这里和第五章不一样。
+        :param x:
+        :return:
+        """
         # テンソル対応
         self.original_x_shape = x.shape
         x = x.reshape(x.shape[0], -1)
