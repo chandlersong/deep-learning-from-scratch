@@ -6,9 +6,9 @@ from common.util import im2col
 
 class MyTestCase(unittest.TestCase):
     def test_im2ColDemos(self):
-        x = np.random.rand(10, 1, 28, 28)
+        x = np.random.rand(10, 1, 6, 6)
         print(x.shape)
-        col1 = im2col(x, 5, 5, stride=1, pad=0)
+        col1 = im2col(x, 2, 2, stride=1, pad=0)
         print(col1.shape)
         print(col1)
 

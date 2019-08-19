@@ -58,6 +58,9 @@ def im2col(input_data, filter_h, filter_w, stride=1, pad=0):
     img = np.pad(input_data, [(0,0), (0,0), (pad, pad), (pad, pad)], 'constant')
     col = np.zeros((N, C, filter_h, filter_w, out_h, out_w))
 
+    """
+    这里其实是在切割。按照过滤器的大小。把原始的数据切成一块一块。一块变成一行。
+    """
     for y in range(filter_h):
         y_max = y + stride*out_h
         for x in range(filter_w):
