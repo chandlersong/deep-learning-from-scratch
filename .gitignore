@@ -4,3 +4,11 @@
 *.pyc
 __pycache__/
 mnist.pkl
+/venv/
+/.idea/.gitignore
+/.idea/deep-learning-from-scratch.iml
+/.idea/deployment.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/other.xml
+/.idea/vcs.xml
