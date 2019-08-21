@@ -238,6 +238,13 @@ class Convolution:
         col_W = self.W.reshape(FN, -1).T
 
         out = np.dot(col, col_W) + self.b
+        """
+        这里的chanel应该是最后算出来的。
+        其实我这里还是不明白。或者说。脑子里面，没有办法把矩阵的变化，形象的转换成这些变化
+        
+        不过这里感觉上还是挺不可理解的。怎么说好呢，其实最后关键是形状。而不是数据的排列？
+        这里的数据，其实就是简单的计算出来结果。然后什么都没做而已。
+        """
         out = out.reshape(N, out_h, out_w, -1).transpose(0, 3, 1, 2)
 
         self.x = x
