@@ -98,6 +98,9 @@ class SimpleConvNet:
         各層の勾配を持ったディクショナリ変数
             grads['W1']、grads['W2']、...は各層の重み
             grads['b1']、grads['b2']、...は各層のバイアス
+
+
+        这里不好像不会优化滤波器。那么滤波器怎么来呢？
         """
         loss_w = lambda w: self.loss(x, t)
 
