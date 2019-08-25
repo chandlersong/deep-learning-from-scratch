@@ -100,7 +100,7 @@ class SimpleConvNet:
             grads['b1']、grads['b2']、...は各層のバイアス
 
 
-        这里不好像不会优化滤波器。那么滤波器怎么来呢？
+        滤波器就是这里的W.会被优化。
         """
         loss_w = lambda w: self.loss(x, t)
 

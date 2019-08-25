@@ -214,6 +214,12 @@ class BatchNormalization:
 
 class Convolution:
     def __init__(self, W, b, stride=1, pad=0):
+        """
+        :param W: 滤波器
+        :param b: 损失函数
+        :param stride:
+        :param pad:
+        """
         self.W = W
         self.b = b
         self.stride = stride
